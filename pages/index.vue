@@ -11,7 +11,11 @@
       <h2>page link</h2>
 
       <div class="links">
-        <nuxt-link to="/hoge" class="links">hoge</nuxt-link>
+        <ul>
+          <li><nuxt-link to="/hoge">hoge</nuxt-link></li>
+          <li><nuxt-link to="/detail/1">detail 1</nuxt-link></li>
+          <li><nuxt-link to="/detail/2">detail 2</nuxt-link></li>
+        </ul>
       </div>
     </div>
   </section>
@@ -27,7 +31,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .container {
   min-height: 100vh;
   display: flex;
@@ -55,5 +59,13 @@ export default {
 
 .links {
   padding-top: 15px;
+}
+
+.links ul {
+  padding: 0;
+}
+
+.links li{
+  list-style: none;
 }
 </style>
