@@ -14,7 +14,7 @@
 
 <script>
   export default {
-    name: "hoge",
+    name: "Hoge",
     methods: {
       setval(ev) {
         this.$store.commit("setHeader", ev.target.value)

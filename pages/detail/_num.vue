@@ -2,12 +2,12 @@
   <section class="container">
     <div>
       <div>
-        page {{$route.params.num}}
+        page {{ $route.params.num }}
       </div>
-      <h1>{{post.title}}</h1>
+      <h1>{{ post.title }}</h1>
       <section>
         <div>
-          {{post.body}}
+          {{ post.body }}
         </div>
       </section>
       <div class="links">
@@ -21,7 +21,7 @@
 <script>
   import axios from "axios";
   export default {
-    name: "detail_num",
+    name: "DetailNum",
     head() {
       return {
         title: this.post.title
@@ -34,11 +34,6 @@
           return { post: res.data }
         })
     },
-    computed: {
-      nextlink() {
-        return "/detail/" + (parseInt(this.$route.params.num) + 1);
-      }
-    }
   };
 </script>
 
