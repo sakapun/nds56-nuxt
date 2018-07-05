@@ -21,11 +21,15 @@
 <script>
   import axios from "axios";
   export default {
-    name: "_num",
+    name: "detail_num",
     head() {
       return {
         title: this.post.title
       }
+    },
+    mounted() {
+      this.$store.commit("setLastPage" , this.$route.params.num);
+      console.log(this.$store.state.lastPage);
     },
     asyncData({ req, params }) {
       // We can return a Promise instead of calling the callback
