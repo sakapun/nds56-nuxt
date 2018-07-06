@@ -36,9 +36,20 @@ module.exports = {
     }
   },
   modules: [
+    '@nuxtjs/onesignal',
     ['@nuxtjs/pwa', { icon: false }],
   ],
   workbox: {
     dev: true, //開発環境でもPWAできるように
   },
+
+  oneSignal: {
+    init: {
+      appId: 'd4ea62bc-bb45-4d5d-8772-33dd466039dc',
+      allowLocalhostAsSecureOrigin: true,
+      welcomeNotification: {
+        disable: true
+      }
+    }
+  }
 }
