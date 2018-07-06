@@ -1,11 +1,11 @@
 export const state = () => {
   return {
-    lastPage: ""
+    headerText: "This is header text"
   };
 };
 
 export const mutations = {
-  setLastPage(state, page) {
-    state.lastPage = page;
+  setHeader(state, text) {
+    state.headerText = text;
   }
 };

@@ -27,10 +27,6 @@
         title: this.post.title
       }
     },
-    mounted() {
-      this.$store.commit("setLastPage" , this.$route.params.num);
-      console.log(this.$store.state.lastPage);
-    },
     asyncData({ req, params }) {
       // We can return a Promise instead of calling the callback
       return axios.get(`https://jsonplaceholder.typicode.com/posts/${params.num}`)

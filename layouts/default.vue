@@ -1,5 +1,6 @@
 <template>
   <div>
+    <header class="header">{{$store.state.headerText}}</header>
     <nuxt/>
   </div>
 </template>
@@ -49,4 +50,9 @@ html {
   color: #fff;
   background-color: #35495e;
 }
+
+  header.header {
+    position: fixed;
+    top: 0;
+  }
 </style>

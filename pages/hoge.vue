@@ -1,8 +1,13 @@
 <template>
   <div class="container">
     <div>
-      <h1>page hoge</h1>
-      <nuxt-link to="/" >home</nuxt-link>
+      <h1>Change the header content</h1>
+      <div>
+        <input type="text" :value="$store.state.headerText" @input="setval"/>
+      </div>
+      <div>
+        <nuxt-link to="/" >home</nuxt-link>
+      </div>
     </div>
   </div>
 </template>
@@ -10,6 +15,11 @@
 <script>
   export default {
     name: "hoge",
+    methods: {
+      setval(ev) {
+        this.$store.commit("setHeader", ev.target.value)
+      }
+    },
   };
 </script>
 
